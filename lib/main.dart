@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_web/pages/home.dart';
 import 'package:responsive_web/utils/colors.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'HindSiliguri',
           brightness: Brightness.light,
           primaryColor: AppColors.primary),
+      home: Home(),
     );
   }
 }
