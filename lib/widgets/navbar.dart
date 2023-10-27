@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:responsive_web/utils/colors.dart';
+import 'package:responsive_web/utils/constraints.dart';
 import 'package:responsive_web/utils/styles.dart';
 
 class NavBar extends StatefulWidget {
@@ -16,6 +17,31 @@ class _NavBarState extends State<NavBar> {
     return ScreenTypeLayout(
       mobile: MobileNavBar(),
       desktop: DesktopNavBar(),
+      tablet: TabletNavBar(),
+    );
+  }
+
+  Widget TabletNavBar() {
+    return SafeArea(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        height: 70,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(Icons.menu),
+            Row(
+              children: [
+                navButton('Features'),
+                navButton('About us'),
+                navButton('Pricing'),
+                navButton('Feedback'),
+              ],
+            ),
+            navLogo()
+          ],
+        ),
+      ),
     );
   }
 
@@ -64,12 +90,12 @@ class _NavBarState extends State<NavBar> {
 
   Widget navButton(String text) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(horizontal: w! * 0.008),
       child: TextButton(
           onPressed: () {},
           child: Text(
             text,
-            style: TextStyle(color: Colors.black, fontSize: 18),
+            style: TextStyle(color: Colors.black, fontSize: w! / 50),
           )),
     );
   }
@@ -77,8 +103,8 @@ class _NavBarState extends State<NavBar> {
   Widget navLogo() {
     return Container(
       width: 110,
-      decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/logo.png'))),
+      decoration:
+          BoxDecoration(image: DecorationImage(image: AssetImage(logo))),
     );
   }
 }

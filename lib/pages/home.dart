@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_web/pages/containers/container1.dart';
 import 'package:responsive_web/widgets/navbar.dart';
 
 import '../utils/constraints.dart';
@@ -19,7 +20,7 @@ class _HomeState extends State<Home> {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: [NavBar()],
+            children: [NavBar(), Container1()],
           ),
         ),
       ),
