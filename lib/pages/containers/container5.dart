@@ -16,7 +16,17 @@ class _Container5State extends State<Container5> {
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => MobileContainer5(),
       desktop: (BuildContext context) => DesktopContainer5(),
+      tablet: (BuildContext context) => TabletContainer5(),
     );
+  }
+
+  Widget TabletContainer5() {
+    return CommonContainerTablet(
+        'USE ANY TIME',
+        'Use anytime \nWhen you \nneed',
+        'Tellus lacus morbi sagittis lacus in, Amet nisl at \nmauris enim account',
+        illustration3,
+        false);
   }
 
   Widget MobileContainer5() {

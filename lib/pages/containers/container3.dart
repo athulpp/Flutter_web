@@ -16,7 +16,17 @@ class _Container3State extends State<Container3> {
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => MobileContainer3(),
       desktop: (BuildContext context) => DesktopContainer3(),
+      tablet: (BuildContext context) => TabletContainer3(),
     );
+  }
+
+  Widget TabletContainer3() {
+    return CommonContainerTablet(
+        'ALWAYS ONLINE',
+        'Real-time \nsupport \nwith cloud',
+        'Tellus lacus morbi sagittis lacus in, Amet nisl at \nmaruris enim account',
+        illustration1,
+        false);
   }
 
   Widget MobileContainer3() {

@@ -16,7 +16,17 @@ class _Container4State extends State<Container4> {
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => MobileContainer4(),
       desktop: (BuildContext context) => DesketopContainer4(),
+      tablet: (BuildContext context) => TabletContainer4(),
     );
+  }
+
+  Widget TabletContainer4() {
+    return CommonContainerTablet(
+        'FREE SOME COST',
+        'Save cost\nfor you\nand family',
+        'Tellus lacus morbi sagittuis lacus in, Amet nisl at macris at enim account',
+        illustration2,
+        true);
   }
 
   Widget MobileContainer4() {

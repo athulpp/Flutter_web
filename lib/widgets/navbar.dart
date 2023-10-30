@@ -24,12 +24,12 @@ class _NavBarState extends State<NavBar> {
   Widget TabletNavBar() {
     return SafeArea(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 20),
         height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.menu),
+            const Icon(Icons.menu),
             Row(
               children: [
                 navButton('Features'),
@@ -48,7 +48,7 @@ class _NavBarState extends State<NavBar> {
   Widget MobileNavBar() {
     return SafeArea(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 20),
         height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
